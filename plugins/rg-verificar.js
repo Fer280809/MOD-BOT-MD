@@ -7,37 +7,49 @@ import fetch from 'node-fetch'
 let Reg = /\|?(.*)([.|] *?)([0-9]*)$/i
 
 let handler = async function (m, { conn, text, usedPrefix, command }) {
-  // Emojis y símbolos temáticos
+  // Emojis y símbolos ultra llamativos
   const emojis = {
-    verified: '✅',
+    fire: '🔥',
+    lightning: '⚡',
+    crown: '👑',
+    diamond: '💎',
+    gem: '💠',
     star: '⭐',
-    key: '🔑',
-    id: '🪪',
+    sparkle: '✨',
+    boom: '💥',
+    rocket: '🚀',
+    trophy: '🏆',
+    medal: '🏅',
+    shield: '🛡️',
+    sword: '⚔️',
+    magic: '🪄',
+    target: '🎯',
+    winner: '🏆',
+    vip: '🌟',
+    exclusive: '💫',
+    premium: '👑',
+    legendary: '🔱',
+    epic: '⚡',
+    rare: '💎',
+    special: '🎖️',
+    verified: '✅',
+    success: '✓',
+    error: '❌',
+    warning: '⚠️',
+    user: '👤',
+    id: '🆔',
     age: '🗓️',
     coin: '🪙',
     exp: '✨',
     token: '🎫',
-    warning: '⚠️',
+    key: '🔑',
     lock: '🔒',
     unlock: '🔓',
     gift: '🎁',
-    success: '✓',
-    error: '❌',
-    user: '👤',
-    crown: '👑',
-    sparkle: '✦',
-    diamond: '💎',
-    fire: '🔥',
-    tada: '🎉',
-    confetti: '🎊',
-    medal: '🏅',
-    trophy: '🏆',
-    gem: '💠',
+    surprise: '🎉',
+    party: '🎊',
     scroll: '📜',
-    certificate: '📝',
-    shield: '🛡️',
-    magic: '✨',
-    vip: '🌟'
+    certificate: '📝'
   };
 
   let who = m.mentionedJid && m.mentionedJid[0] ? m.mentionedJid[0] : m.fromMe ? conn.user.jid : m.sender
@@ -46,38 +58,68 @@ let handler = async function (m, { conn, text, usedPrefix, command }) {
   let user = global.db.data.users[m.sender]
   let name2 = conn.getName(m.sender)
   
-  // Mensaje si ya está registrado
+  // Mensaje si ya está registrado - optimizado para móvil
   if (user.registered === true) {
-    return m.reply(`${emojis.warning} *¡Ya estás registrado!* ${emojis.warning}\n\n¿Quieres registrarte nuevamente?\nUsa: *${usedPrefix}unreg* para eliminar tu registro actual.`)
+    return m.reply(`
+╔═══════════════════════╗
+║ ${emojis.warning}${emojis.shield} DENEGADO ${emojis.shield}${emojis.warning} ║
+╚═══════════════════════╝
+
+${emojis.fire} ¡YA ERES VIP! ${emojis.fire}
+
+${emojis.legendary} Cuenta activa
+${emojis.premium} Estatus: VIP
+${emojis.rocket} Reiniciar: *${usedPrefix}unreg*
+
+${emojis.sword}═══════════════════${emojis.sword}
+
+${emojis.boom}${emojis.fire}${emojis.lightning}${emojis.crown}${emojis.diamond}${emojis.trophy}${emojis.magic}${emojis.sparkle}${emojis.verified}${emojis.premium}${emojis.legendary}${emojis.epic}${emojis.rare}${emojis.special}${emojis.vip}${emojis.shield}${emojis.sword}${emojis.target}${emojis.gift}${emojis.gem}${emojis.star}${emojis.rocket}
+`)
   }
   
-  // Verificación de formato
+  // Verificación de formato - optimizado para móvil
   if (!Reg.test(text)) {
-    return m.reply(`${emojis.error} *Formato incorrecto* ${emojis.error}\n\n${emojis.key} *Uso correcto:* ${usedPrefix + command} nombre.edad\n${emojis.user} *Ejemplo:* ${usedPrefix + command} ${name2}.18`)
+    return m.reply(`
+╔═══════════════════════╗
+║ ${emojis.error}${emojis.target} FORMATO MAL ${emojis.target}${emojis.error} ║
+╚═══════════════════════╝
+
+${emojis.boom} ¡DATOS INVÁLIDOS! ${emojis.boom}
+
+${emojis.key} **USO CORRECTO:**
+${emojis.rocket} \`${usedPrefix + command} nombre.edad\`
+
+${emojis.lightning} **EJEMPLO:**
+${emojis.fire} \`${usedPrefix + command} ${name2}.18\`
+
+${emojis.sword}═══════════════════${emojis.sword}
+
+${emojis.boom}${emojis.fire}${emojis.lightning}${emojis.crown}${emojis.diamond}${emojis.trophy}${emojis.magic}${emojis.sparkle}${emojis.verified}${emojis.premium}${emojis.legendary}${emojis.epic}${emojis.rare}${emojis.special}${emojis.vip}${emojis.shield}${emojis.sword}${emojis.target}${emojis.gift}${emojis.gem}${emojis.star}${emojis.rocket}
+`)
   }
   
   let [_, name, splitter, age] = text.match(Reg)
   
-  // Validaciones
-  if (!name) return m.reply(`${emojis.error} *El nombre no puede estar vacío.*`)
-  if (!age) return m.reply(`${emojis.error} *La edad no puede estar vacía.*`)
-  if (name.length >= 100) return m.reply(`${emojis.error} *El nombre es demasiado largo.*`)
+  // Validaciones más épicas y compactas
+  if (!name) return m.reply(`${emojis.error}${emojis.boom} **¡NOMBRE REQUERIDO!** ${emojis.fire}${emojis.lightning}${emojis.crown}${emojis.diamond}${emojis.trophy}${emojis.magic}${emojis.sparkle}${emojis.verified}${emojis.premium}${emojis.legendary}${emojis.epic}${emojis.rare}${emojis.special}${emojis.vip}${emojis.shield}${emojis.sword}${emojis.target}${emojis.gift}${emojis.gem}${emojis.star}${emojis.rocket}`)
+  if (!age) return m.reply(`${emojis.error}${emojis.boom} **¡EDAD REQUERIDA!** ${emojis.fire}${emojis.lightning}${emojis.crown}${emojis.diamond}${emojis.trophy}${emojis.magic}${emojis.sparkle}${emojis.verified}${emojis.premium}${emojis.legendary}${emojis.epic}${emojis.rare}${emojis.special}${emojis.vip}${emojis.shield}${emojis.sword}${emojis.target}${emojis.gift}${emojis.gem}${emojis.star}${emojis.rocket}`)
+  if (name.length >= 100) return m.reply(`${emojis.error}${emojis.boom} **¡NOMBRE MUY LARGO!** ${emojis.fire}${emojis.lightning}${emojis.crown}${emojis.diamond}${emojis.trophy}${emojis.magic}${emojis.sparkle}${emojis.verified}${emojis.premium}${emojis.legendary}${emojis.epic}${emojis.rare}${emojis.special}${emojis.vip}${emojis.shield}${emojis.sword}${emojis.target}${emojis.gift}${emojis.gem}${emojis.star}${emojis.rocket}`)
   
   age = parseInt(age)
-  if (age > 1000) return m.reply(`${emojis.error} *¡Vaya! ¿El abuelo quiere jugar al bot?*`)
-  if (age < 5) return m.reply(`${emojis.error} *¿Un bebé usando WhatsApp? ¡Increíble!*`)
+  if (age > 1000) return m.reply(`${emojis.error}${emojis.boom} **¡OYE INMORTAL!** ¿${age} años? ${emojis.fire}${emojis.lightning}${emojis.crown}${emojis.diamond}${emojis.trophy}${emojis.magic}${emojis.sparkle}${emojis.verified}${emojis.premium}${emojis.legendary}${emojis.epic}${emojis.rare}${emojis.special}${emojis.vip}${emojis.shield}${emojis.sword}${emojis.target}${emojis.gift}${emojis.gem}${emojis.star}${emojis.rocket}`)
+  if (age < 5) return m.reply(`${emojis.error}${emojis.boom} **¡BEBÉ GENIO!** ¿${age} años? ${emojis.rocket}${emojis.fire}${emojis.lightning}${emojis.crown}${emojis.diamond}${emojis.trophy}${emojis.magic}${emojis.sparkle}${emojis.verified}${emojis.premium}${emojis.legendary}${emojis.epic}${emojis.rare}${emojis.special}${emojis.vip}${emojis.shield}${emojis.sword}${emojis.target}${emojis.gift}${emojis.gem}${emojis.star}`)
   
   // Registro del usuario
-  user.name = name + emojis.success
+  user.name = name + emojis.verified
   user.age = age
   user.regTime = + new Date      
   user.registered = true
   
-  // Recompensas
+  // Recompensas ÉPICAS
   const rewards = {
-    coin: 40,
-    exp: 300,
-    joincount: 20
+    coin: 50,
+    exp: 500,
+    joincount: 30
   };
   
   global.db.data.users[m.sender].coin += rewards.coin
@@ -87,59 +129,75 @@ let handler = async function (m, { conn, text, usedPrefix, command }) {
   // Generar código único de registro
   let sn = createHash('md5').update(m.sender).digest('hex').slice(0, 20)
   
-  // Crear elementos decorativos para un diseño llamativo
-  const stars = '✧⋄⋆⋅⋆⋄✧⋄⋆⋅⋆⋄✧⋄⋆⋅⋆⋄✧';
-  const headerBorder = '╔═══ *⊹ ⊱ ✅ ⊰ ⊹* ═══╗';
-  const headerBorderEnd = '╚═══ *⊹ ⊱ ✅ ⊰ ⊹* ═══╝';
-  const rewardHeader = '╭────✩✮✩────╮\n   *RECOMPENSAS*\n╰────✩✮✩────╯';
-  const profileBox = '╭──────────────────╮\n│ ⚚ *PERFIL DE USUARIO* ⚚ │\n│                    │';
-  
-  // Mensaje de verificación con diseño super atractivo
+  // Mensaje de verificación ULTRA ÉPICO optimizado para móvil
   let regbot = `
-╔═══ *⊹ ⊱ ✅ ⊰ ⊹* ═══╗
-┃ ⌬ *VERIFICADO* ⌬ ┃
-╚═══ *⊹ ⊱ ✅ ⊰ ⊹* ═══╝
+╔═══════════════════════╗
+║ ${emojis.crown}${emojis.fire} VERIFICADO ${emojis.fire}${emojis.crown} ║
+╚═══════════════════════╝
 
-╭──────────────────╮
-│ ⚚ *PERFIL DE USUARIO* ⚚ │
-│                    │
-│ 👤 *Nombre:* ${name} │
-│ 🗓️ *Edad:* ${age} años │
-│ 🆔 *ID:* ${sn.substring(0, 10)}... │
-╰──────────────────╯
+${emojis.rocket}${emojis.lightning} ¡BIENVENIDO HERMANO! ${emojis.lightning}${emojis.rocket}
 
-✧⋄⋆⋅⋆⋄✧⋄⋆⋅⋆⋄✧⋄⋆⋅⋆⋄✧
+╭─────────────────────╮
+│ ${emojis.legendary} PERFIL GUERRERO ${emojis.legendary} │
+│                     │
+│ ${emojis.user} **${name}** ${emojis.verified}        │
+│ ${emojis.age} **${age} años** ${emojis.fire}       │
+│ ${emojis.id} **${sn.substring(0, 8)}...** │
+│ ${emojis.certificate} **VIP ACTIVO** ${emojis.premium}  │
+╰─────────────────────╯
 
-╭────✩✮✩────╮
-   *RECOMPENSAS*
-╰────✩✮✩────╯
+${emojis.sword}═══════════════════${emojis.sword}
 
-${emojis.diamond} +${rewards.coin} ${emojis.coin} Monedas
-${emojis.diamond} +${rewards.exp} ${emojis.exp} Experiencia
-${emojis.diamond} +${rewards.joincount} ${emojis.token} Tokens
+╭─────────────────────╮
+│ ${emojis.gift} RECOMPENSAS ${emojis.gift} │
+│                     │
+│ ${emojis.coin} **+${rewards.coin}** Monedas ${emojis.boom}   │
+│ ${emojis.exp} **+${rewards.exp}** XP ${emojis.rocket}       │
+│ ${emojis.token} **+${rewards.joincount}** Tokens ${emojis.lightning}   │
+│                     │
+│ ${emojis.trophy} **VIP DESBLOQUEADO** ${emojis.trophy} │
+╰─────────────────────╯
 
-✧⋄⋆⋅⋆⋄✧⋄⋆⋅⋆⋄✧⋄⋆⋅⋆⋄✧
+${emojis.magic}${emojis.sparkle}${emojis.diamond}${emojis.sparkle}${emojis.magic}${emojis.sparkle}${emojis.diamond}${emojis.sparkle}${emojis.magic}
 
-📝 *Código de Seguridad*
-\`\`\`${sn}\`\`\`
-_Guárdalo para recuperar cuenta_
+╭─────────────────────╮
+│ ${emojis.scroll} CÓDIGO SEGURO ${emojis.shield} │
+│                     │
+│ \`${sn.substring(0, 16)}\` │
+│                     │
+│ ${emojis.warning} **¡GUÁRDALO!** ${emojis.warning}     │
+│ ${emojis.key} Para recuperar     │
+╰─────────────────────╯
 
-✧⋄⋆⋅⋆⋄✧⋄⋆⋅⋆⋄✧⋄⋆⋅⋆⋄✧`;
+${emojis.fire}${emojis.lightning}${emojis.crown} **¡GUERRERO VIP!** ${emojis.crown}${emojis.lightning}${emojis.fire}
+
+${emojis.sword}═══════════════════${emojis.sword}
+
+${emojis.boom}${emojis.rocket}${emojis.trophy}${emojis.diamond}${emojis.fire}${emojis.lightning}${emojis.crown}${emojis.magic}${emojis.sparkle}${emojis.verified}${emojis.premium}${emojis.legendary}${emojis.epic}${emojis.rare}${emojis.special}${emojis.vip}${emojis.exclusive}${emojis.winner}${emojis.medal}${emojis.shield}${emojis.sword}${emojis.target}${emojis.gift}${emojis.surprise}${emojis.party}${emojis.gem}${emojis.star}${emojis.sparkle}${emojis.boom}`;
   
-  // Reaccionar con una secuencia de emojis para mayor impacto
-  const reactionSequence = [emojis.verified, emojis.medal, emojis.tada, emojis.vip];
+  // Secuencia de reacciones épicas
+  const reactionSequence = [
+    emojis.rocket,
+    emojis.boom,
+    emojis.fire,
+    emojis.crown,
+    emojis.trophy,
+    emojis.diamond,
+    emojis.verified
+  ];
+  
   for (const emoji of reactionSequence) {
     await m.react(emoji);
-    await new Promise(resolve => setTimeout(resolve, 500)); // Pequeña pausa entre reacciones
+    await new Promise(resolve => setTimeout(resolve, 400));
   }
 
-  // Enviar mensaje con thumbnail ultra llamativo
+  // Enviar mensaje con contexto ULTRA llamativo
   await conn.sendMessage(m.chat, {
     text: regbot,
     contextInfo: {
       externalAdReply: {
-        title: `${emojis.trophy} ⚜️ USUARIO VIP VERIFICADO ⚜️ ${emojis.trophy}`,
-        body: `✨ ¡Bienvenido ${name}! Has desbloqueado recompensas especiales ✨`,
+        title: `${emojis.crown}${emojis.fire}${emojis.lightning} VIP VERIFICADO ${emojis.lightning}${emojis.fire}${emojis.crown}`,
+        body: `${emojis.rocket}${emojis.boom}${emojis.trophy} ¡${name} es ahora GUERRERO ÉLITE! ${emojis.trophy}${emojis.boom}${emojis.rocket}`,
         thumbnailUrl: pp,
         sourceUrl: global.channel || 'https://whatsapp.com',
         mediaType: 1,
