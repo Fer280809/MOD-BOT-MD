@@ -13,9 +13,15 @@ let handler = async (m, { conn, usedPrefix }) => {
 │ ⭐ *Rol:* Fundador
 └──────────────────┘
 
-🤖 **ASTA_BOT FERNANDO**
+🤖 **ASTA_BOT **
 ┌──────────────────┐
 │ 📱 +52 746 117 7130
+│ 🎯 *Rol:* Bot oficial
+└──────────────────┘
+
+🤖 *MOD-BOT-MD*
+┌──────────────────┐
+│ 📱 (proximamete)
 │ 🎯 *Rol:* Bot oficial
 └──────────────────┘
 
@@ -28,20 +34,6 @@ let handler = async (m, { conn, usedPrefix }) => {
 🌐 github.com/javi16-art
 ⚡ Desarrollo de comandos
 
-🎨 **PABLO**
-📱 +51 907 512 473
-🌐 github.com/Erickztone
-🎭 Creación de personajes
-
-🤝 **NOSE**
-📱 +51 927 917 562
-👑 Mano derecha del creador
-
-📢 **PAUL**
-📱 +593 98 544 0092
-🌐 github.com/PAYASOBOT24
-🎪 Publicidad
-
 ╭─────────────────────╮
 ┃ 🌟 *RESUMEN* 🌟
 ╰─────────────────────╯
@@ -49,7 +41,7 @@ let handler = async (m, { conn, usedPrefix }) => {
 📊 *Equipo:*
 • 👑 1 Creador
 • 🤖 1 Bot oficial
-• 💻 4 Desarrolladores
+• 💻 1 Desarrolladores
 
 🌍 *Países:*
 🇲🇽 México - 🇵🇪 Perú - 🇪🇨 Ecuador
