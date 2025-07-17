@@ -8,25 +8,23 @@ let handler = async (m, { conn, args }) => {
     let totalCommands = Object.values(global.plugins).filter((v) => v.help && v.tags).length
     
     let txt = `
-   🌟⭐ *${botname}* ⭐🌟
+   ⭐ *${botname}* ⭐
    
 ╭─━━━━━━━━━━━━━━━─╮
 │ 🎭 ¡Hola @${userId.split('@')[0]}! 💖
 ╰─━━━━━━━━━━━━━━━─╯
 
-✨ *ɪɴғᴏ ʙᴏᴛ* ✨
-┏━━━━━━━━━━━━━━━┓
-┃ 🤖 Estado: ${(conn.user.jid == global.conn.user.jid ? '🟢 PREMIUM ' : '🔗 prem-ʙᴏᴛ')}
-┃ ⚡ Activo: 『${uptime}』
-┃ 👥 Users: 『${totalreg}』🔥
-┃ 🛠️ Comandos: 『${totalCommands}』⚙️
-┃ 📅 Fecha: ${moment().tz('America/Mexico_City').format('DD/MM/YYYY')}
-┃ 🕐 Hora: ${moment().tz('America/Mexico_City').format('HH:mm:ss')}
-┃ 🌍 Servidor: México 🇲🇽
-┃ 📡 Ping: Online ✅
-┃ 💾 Memoria: Estable 📊
-┃ 🔒 Modo: Privado 🔐
-┗━━━━━━━━━━━━━━┛
+╭─═⊰ 📡 𝐄𝐒𝐓𝐀𝐃𝐎 𝐀𝐂𝐓𝐈𝐕𝐎 ⊰═─╮
+│ 🤖 Estado: ${(conn.user.jid == global.conn.user.jid ? '🟢 PRINCIPAL ' : '🔗 Sup-bot')}
+│ 📅 Fecha: ${moment().tz('America/Mexico_City').format('DD/MM/YYYY')}
+│ 🛠️ Comandos: 『${totalCommands}』⚙️
+│ 🕐 Hora: ${moment().tz('America/Mexico_City').format('HH:mm:ss')}
+│ ⚙️ 𝙑𝙚𝙧𝙨𝙞ó𝙣: 𝟭.𝟬.0 
+│ 👥 Users: 『${totalreg}』🔥
+│ ⏳ 𝘼𝙘𝙩𝙞𝙫𝙖𝙙𝙤:『${uptime}』
+│ 👨‍💻 𝘾𝙧𝙚𝙖𝙙𝙤𝙧: Fernando
+│ 🔓 Modo: Publico 🔓
+╰─────────────────────────────╯                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                
 
 > ❍ Se bot en el grupo oficial del bot 
 
