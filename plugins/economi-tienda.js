@@ -71,7 +71,7 @@ let handler = async (m, { conn, args, command }) => {
 
     // Si no hay argumentos, mostrar la tienda completa
     if (!args[0]) {
-        let img = 'https://raw.githubusercontent.com/The-King-Destroy/Adiciones/main/Contenido/tienda.jpeg';
+        let img = 'https://files.catbox.moe/79serv.jpg';
         
         // Calcular valores de inventarios
         let animalValue = 0, huntTrophyValue = 0, fishValue = 0, treasureValue = 0;
