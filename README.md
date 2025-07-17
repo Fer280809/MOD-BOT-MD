@@ -179,25 +179,7 @@ npm start
 
 </details>
 
-<div align="center">
-  <img src="https://profile-counter.glitch.me/Fer280809/count.svg" />
-  <p>👁️ Visitantes del Repositorio 👁️</p>
-</div>
-
 ---
-
-<div align="center">
-  <h2 style="background: linear-gradient(to right, #FF0000, #00FF00, #0000FF); -webkit-background-clip: text; -webkit-text-fill-color: transparent; font-size: 30px; font-weight: bold; margin: 20px 0;">📢 ¡ÚNETE AL CANAL OFICIAL DEL MOD-BOT-MD! 📢</h2>
-  
-  <p style="color: #FF9900; font-size: 18px; margin-bottom: 15px;">En nuestro canal estaremos compartiendo todas las novedades, actualizaciones y tips exclusivos</p>
-  
-  <a href="https://whatsapp.com/channel/0029VbAoYE99hXF1wm3zmQ21" style="display: inline-block; background: linear-gradient(to right, #25D366, #128C7E); color: white; font-weight: bold; padding: 12px 30px; text-decoration: none; border-radius: 30px; box-shadow: 0 4px 10px rgba(37, 211, 102, 0.5); transition: all 0.3s ease;">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/WhatsApp.svg/768px-WhatsApp.svg.png" height="20px" style="vertical-align: middle; margin-right: 8px;">
-    ACCEDER AL CANAL AHORA
-  </a>
-  
-  <p style="color: #FF5252; font-size: 16px; margin-top: 15px;">💎 No te pierdas ninguna actualización importante 💎</p>
-</div>
 
 <div align="center">
   <h2>👑 CREADOR DEL BOT 👑</h2>
