@@ -10,7 +10,7 @@ import moment from 'moment-timezone'
 //*─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─*
 
 //BETA: Si quiere evitar escribir el número que será bot en la consola, agregué desde aquí entonces:
-//Sólo aplica para opción 2 (ser bot con código de texto de 8 digitos)
+//Sólo aplica para opción 2 (ser bot con código de texto de 8 digitos) NO RECOMENDABLE
 global.botNumber = '' //Ejemplo: 573218138672
 
 //*─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─*
@@ -52,8 +52,8 @@ global.etiqueta = '𝕱𝖊𝖗𝖓𝖆𝖓𝖉𝖔'
 global.moneda = '¥enes'
 global.welcom1 = '❍ Edita Con El Comando setwelcome'
 global.welcom2 = '❍ Edita Con El Comando setbye'
-global.banner = 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgwEyPc2ZcSJLv1nKjMoNcqTD_PZl1Zk9ujraVrJSEw_efKhnurC6XGA6VOj73W-ygzfgfou1-g_3EzCX41BCiLXPvTjcIUy4BL78F9l9MuQlWAIg4E3DjO-Kx-qO-yIIhkOyeYaqDeyx8MW4EusFhzDUqID_Pk2RRUWhDfHErCquK71DBo9v4BhRjtXBNt/s736/b63bb3b9-7464-494f-937f-9aa4394cb124.jpg'
-global.avatar = 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgwEyPc2ZcSJLv1nKjMoNcqTD_PZl1Zk9ujraVrJSEw_efKhnurC6XGA6VOj73W-ygzfgfou1-g_3EzCX41BCiLXPvTjcIUy4BL78F9l9MuQlWAIg4E3DjO-Kx-qO-yIIhkOyeYaqDeyx8MW4EusFhzDUqID_Pk2RRUWhDfHErCquK71DBo9v4BhRjtXBNt/s736/b63bb3b9-7464-494f-937f-9aa4394cb124.jpg'
+global.banner = 'https://files.catbox.moe/ix5mgf.jpg'
+global.avatar = 'https://files.catbox.moe/ix5mgf.jpg'
 
 //*─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─*
 
@@ -61,7 +61,7 @@ global.gp1 = 'https://chat.whatsapp.com/BWwvJ4h5lzuLhIuXsBK0Wh'
 global.comunidad1 = 'https://chat.whatsapp.com/JONU3lLJhCf0JgCuL13gwk'
 global.channel = 'https://whatsapp.com/channel/0029VbAoYE99hXF1wm3zmQ21'
 global.channel2 = 'https://whatsapp.com/channel/0029VbAoYE99hXF1wm3zmQ21'
-global.md = 'https://github.com/Fer280809/Asta_bot'
+global.md = 'https://github.com/Fer280809/MOD-BOT-MD'
 global.correo = 'fer280809fl@gmail.com'
 global.cn ='https://whatsapp.com/channel/0029VbAoYE99hXF1wm3zmQ21';
 
