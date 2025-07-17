@@ -47,96 +47,100 @@ let handler = async (m, { conn, args }) => {
     // Actividad reciente
     const lastSeen = user.lastSeen ? moment(user.lastSeen).fromNow() : 'Desconocido';
 
-    let perfil = await conn.profilePictureUrl(userId, 'image').catch(_ => 'https://files.catbox.moe/ix5mgf.jpg');
+    let perfil = await conn.profilePictureUrl(userId, 'image').catch(_ => 'https://files.catbox.moe/02m1h5.jpg');
 
-    // Emojis según género
-    let genderEmoji = '⚪';
+    // Emojis según género con más estilo
+    let genderEmoji = '🌟';
     if (genero.toLowerCase().includes('hombre') || genero.toLowerCase().includes('masculino')) {
-        genderEmoji = '♂️';
+        genderEmoji = '👨‍💼';
     } else if (genero.toLowerCase().includes('mujer') || genero.toLowerCase().includes('femenino')) {
-        genderEmoji = '♀️';
+        genderEmoji = '👩‍💼';
     }
     
-    // Estado premium con bling
-    let premiumStatus = user.premium ? '✨ PREMIUM ✨' : '❌ FREE';
+    // Estado premium con más bling
+    let premiumStatus = user.premium ? '✨ 𝗣𝗥𝗘𝗠𝗜𝗨𝗠 ✨' : '🔓 𝗙𝗥𝗘𝗘';
     
-    // Emojis para rangos
+    // Emojis para rangos más modernos
     let roleEmoji = '👤';
     if (role.toLowerCase().includes('admin')) roleEmoji = '👑';
     else if (role.toLowerCase().includes('mod')) roleEmoji = '🛡️';
     else if (role.toLowerCase().includes('vip')) roleEmoji = '💎';
 
-    // Estado civil mejorado
+    // Estado civil mejorado con más estilo
     let maritalStatus;
     if (marriageInfo) {
-        maritalStatus = `💍 Casado/a con ${partnerName}`;
+        maritalStatus = `💍 𝗖𝗮𝘀𝗮𝗱𝗼/𝗮 𝗰𝗼𝗻 ${partnerName}`;
         if (marriageDate) {
-            maritalStatus += `\n*┃* *💕 Fecha de matrimonio:* ${marriageDate}`;
+            maritalStatus += `\n║ ⚡ 💕 𝗙𝗲𝗰𝗵𝗮: ${marriageDate}`;
         }
     } else {
-        maritalStatus = '💔 Soltero/a';
+        maritalStatus = '💔 𝗦𝗼𝗹𝘁𝗲𝗿𝗼/𝗮';
+    }
+
+    // Determinar nivel de actividad
+    let activityLevel = '🟢 𝗔𝗰𝘁𝗶𝘃𝗼';
+    if (user.lastSeen) {
+        const lastSeenMoment = moment(user.lastSeen);
+        const hoursDiff = now.diff(lastSeenMoment, 'hours');
+        if (hoursDiff > 24) activityLevel = '🟡 𝗜𝗻𝗮𝗰𝘁𝗶𝘃𝗼';
+        if (hoursDiff > 72) activityLevel = '🔴 𝗠𝘂𝘆 𝗜𝗻𝗮𝗰𝘁𝗶𝘃𝗼';
+    }
+
+    // Barra de progreso para nivel
+    let progressBar = '';
+    let progress = (exp % 1000) / 1000;
+    for (let i = 0; i < 10; i++) {
+        progressBar += i < progress * 10 ? '▰' : '▱';
     }
 
     let profileText = `
-*╭━━━━❰ 🌟 PERFIL DE USUARIO 🌟 ❱━━━━╮*
-*┃*
-*┃* *👤 Usuario:* @${userId.split('@')[0]}
-*┃* *🏷️ Nombre:* ${name}
-*┃* *📝 Descripción:* 
-*┃* ${description}
-*┃*
-*┃* *━━━━❰ ℹ️ INFORMACIÓN PERSONAL ℹ️ ❱━━━━*
-*┃* 
-*┃* *🎂 Edad:* ${user.age || 'Desconocida'}
-*┃* *🎊 Cumpleaños:* ${cumpleanos}
-*┃* *${genderEmoji} Género:* ${genero}
-*┃* *💘 Estado Civil:* ${maritalStatus}
-*┃* *⏱️ Registrado hace:* ${timeDiff} días
-*┃* *⌚ Última actividad:* ${lastSeen}
-*┃*
-*┃* *━━━━❰ 🏆 ESTADÍSTICAS 🏆 ❱━━━━*
-*┃*
-*┃* *✨ Experiencia:* ${exp.toLocaleString()}
-*┃* *🔥 Nivel:* ${nivel}
-*┃* *${roleEmoji} Rango:* ${role}
-*┃*
-*┃* *━━━━❰ 💰 ECONOMÍA 💰 ❱━━━━*
-*┃*
-*┃* *👛 Cartera:* ${coins.toLocaleString()} ${moneda}
-*┃* *🏦 Banco:* ${bankCoins.toLocaleString()} ${moneda}
-*┃* *💼 Total:* ${(coins + bankCoins).toLocaleString()} ${moneda}
-*┃*
-*┃* *━━━━❰ 🌈 ESTADOS 🌈 ❱━━━━*
-*┃*
-*┃* *👑 Premium:* ${premiumStatus}
-*┃* *🧩 Estado VIP:* ${user.vip ? '✅ Activado' : '❌ Desactivado'}
-*┃* *🛡️ Reputación:* ${user.reputation || 0} ⭐
-*┃*
-*╰━━━━━━━━━━━━━━━━━━━━━━━╯*
+╔═══════════════════════════╗
+║    🌟 𝗣𝗘𝗥𝗙𝗜𝗟 𝗗𝗘 𝗨𝗦𝗨𝗔𝗥𝗜𝗢 🌟   ║
+╠═══════════════════════════╣
+║
+║ 👤 @${userId.split('@')[0]}
+║ 🏷️ ${name}
+║ 📝 ${description}
+║
+╠═══════════════════════════╣
+║       💫 𝗜𝗡𝗙𝗢 𝗣𝗘𝗥𝗦𝗢𝗡𝗔𝗟 💫     ║
+╠═══════════════════════════╣
+║ 
+║ 🎂 ${user.age || 'Desconocida'}
+║ 🎊 ${cumpleanos}
+║ ${genderEmoji} ${genero}
+║ 💘 ${maritalStatus}
+║ ⏱️ ${timeDiff} días
+║ ⌚ ${lastSeen}
+║ 🔥 ${activityLevel}
+║
+╠═══════════════════════════╣
+║        🏆 𝗘𝗦𝗧𝗔𝗗𝗜́𝗦𝗧𝗜𝗖𝗔𝗦 🏆      ║
+╠═══════════════════════════╣
+║
+║ ✨ ${exp.toLocaleString()} XP
+║ 🔥 Nivel ${nivel}
+║ 📊 ${progressBar}
+║ ${roleEmoji} ${role}
+║ 🛡️ ${user.reputation || 0} ⭐
+║
+╠═══════════════════════════╣
+║         💰 𝗘𝗖𝗢𝗡𝗢𝗠𝗜́𝗔 💰       ║
+╠═══════════════════════════╣
+║
+║ 👛 ${coins.toLocaleString()} ${moneda}
+║ 🏦 ${bankCoins.toLocaleString()} ${moneda}
+║ 💼 ${(coins + bankCoins).toLocaleString()} ${moneda}
+║
+╠═══════════════════════════╣
+║        🌈 𝗘𝗦𝗧𝗔𝗗𝗢𝗦 🌈       ║
+╠═══════════════════════════╣
+║
+║ 👑 ${premiumStatus}
+║ 🧩 ${user.vip ? '✅ VIP' : '❌ Normal'}
+║
+╚═══════════════════════════╝
 
-*🔮 Usa el comando /editar para personalizar tu perfil* 
-*💫 Gana más experiencia interactuando en el grupo*
-${marriageInfo ? '' : '*💘 Usa /marry para encontrar el amor*'}
-  `.trim();
-
-    await conn.sendMessage(m.chat, { 
-        text: profileText,
-        contextInfo: {
-            mentionedJid: [userId],
-            externalAdReply: {
-                title: '✧・✦・💫 Perfil de Usuario 💫・✦・✧',
-                body: dev,
-                thumbnailUrl: perfil,
-                mediaType: 1,
-                showAdAttribution: true,
-                renderLargerThumbnail: true
-            }
-        }
-    }, { quoted: m });
-};
-
-handler.help = ['profile', 'perfil'];
-handler.tags = ['rg'];
-handler.command = ['profile', 'perfil'];
-
-export default handler;
+🔮 /editar para personalizar
+💫 Gana XP interactuando
+${marriageInfo ? '' : '💘 /marry para encontrar amor'}
