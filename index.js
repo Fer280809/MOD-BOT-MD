@@ -40,10 +40,10 @@ const PORT = process.env.PORT || process.env.SERVER_PORT || 3000
 let { say } = cfonts
 
 console.log(chalk.bold.cyan('\n═══════════════════════════════════════════════════════════'))
-console.log(chalk.bold.white('               ✨ BIENVENIDO A ASTA BOT ✨'))
+console.log(chalk.bold.white('               ✨ BIENVENIDO A MOD-BOT-MD ✨'))
 console.log(chalk.bold.cyan('═══════════════════════════════════════════════════════════'))
 
-say('Asta-Bot', {
+say('MOD-BOT-MD', {
   font: 'block',
   align: 'center',
   colors: ['magentaBright']
@@ -91,7 +91,7 @@ global.opts = new Object(yargs(process.argv.slice(2)).exitProcess(false).parse()
 global.prefix = new RegExp('^[#/!.]')
 
 global.sessions = 'session'
-const nameqr = 'AstaBot'
+const nameqr = 'MOD-BOT-MD'
 
 global.db = new Low(
   /https?:\/\//.test(opts['db'] || '')
@@ -150,7 +150,7 @@ if (methodCodeQR) {
 if (!methodCodeQR && !methodCode && !fs.existsSync(`./${global.sessions}/creds.json`)) {
   do {
     console.log(chalk.bold.cyan('\n═══════════════════════════════════════════════════════════'))
-    console.log(chalk.bold.white('              🔗 MÉTODO DE VINCULACIÓN - ASTA BOT 🔗'))
+    console.log(chalk.bold.white('              🔗 MÉTODO DE VINCULACIÓN - MOD-BOT-MD 🔗'))
     console.log(chalk.bold.cyan('═══════════════════════════════════════════════════════════'))
     opcion = await question(
       colores('\n📱 Selecciona tu método de vinculación:\n\n') +
