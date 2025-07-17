@@ -30,15 +30,15 @@ console.log(`Error : ${e}`)
 global.creador = 'Wa.me/524181450063'
 global.ofcbot = `${conn.user.jid.split('@')[0]}`
 global.asistencia = 'Wa.me/527461177130'
-global.namechannel = '『𝕬𝖘𝖙𝖆-𝕭𝖔𝖙』'
-global.namechannel2 = '『𝕬𝖘𝖙𝖆-𝕭𝖔𝖙』'
-global.namegrupo = '『𝕬𝖘𝖙𝖆-𝕭𝖔𝖙』'
-global.namecomu = '『𝕬𝖘𝖙𝖆-𝕭𝖔𝖙』'
+global.namechannel = '『𝓜𝓞𝓓-𝓑𝓞𝓣-𝓜𝓓』'
+global.namechannel2 = '『𝓜𝓞𝓓-𝓑𝓞𝓣-𝓜𝓓』'
+global.namegrupo = '『𝓜𝓞𝓓-𝓑𝓞𝓣-𝓜𝓓』'
+global.namecomu = '『𝓜𝓞𝓓-𝓑𝓞𝓣-𝓜𝓓』'
 global.listo = '❀ *Aquí tienes ฅ^•ﻌ•^ฅ*'
 global.fotoperfil = await conn.profilePictureUrl(m.sender, 'image').catch(_ => 'https://raw.githubusercontent.com/The-King-Destroy/Adiciones/main/Contenido/1745522645448.jpeg')
 
 global.canalIdM = ["120363399175402285@newsletter", "120363399175402285@newsletter"]
-global.canalNombreM = ["『𝕬𝖘𝖙𝖆-𝕭𝖔𝖙』", "『𝕬𝖘𝖙𝖆-𝕭𝖔𝖙』"]
+global.canalNombreM = ["『𝓜𝓞𝓓-𝓑𝓞𝓣-𝓜𝓓』", "『𝓜𝓞𝓓-𝓑𝓞𝓣-𝓜𝓓』"]
 global.channelRD = await getRandomChannel()
 
 global.d = new Date(new Date + 3600000)
@@ -69,12 +69,12 @@ global.waitttt = '❍ Espera un momento, soy lenta...';
 var canal = 'https://whatsapp.com/channel/0029VbAoYE99hXF1wm3zmQ21'  
 var comunidad = 'https://chat.whatsapp.com/JONU3lLJhCf0JgCuL13gwk'
 var git = 'https://github.com/Fer280809'
-var github = 'https://github.com/Fer280809/Asta_bot' 
+var github = 'https://github.com/Fer280809/MOD-BOT-MD' 
 let correo = 'fer280809fl@gmail.com'
 global.redes = [canal, comunidad, git, github, correo].getRandom()
 
 let category = "imagen"
-const db = 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgwEyPc2ZcSJLv1nKjMoNcqTD_PZl1Zk9ujraVrJSEw_efKhnurC6XGA6VOj73W-ygzfgfou1-g_3EzCX41BCiLXPvTjcIUy4BL78F9l9MuQlWAIg4E3DjO-Kx-qO-yIIhkOyeYaqDeyx8MW4EusFhzDUqID_Pk2RRUWhDfHErCquK71DBo9v4BhRjtXBNt/w536-h536/b63bb3b9-7464-494f-937f-9aa4394cb124.jpg'
+const db = 'https://files.catbox.moe/ix5mgf.jpg'
 try {
   const response = await fetch(db);
   //  const text = await response.text();  // Remove this line
