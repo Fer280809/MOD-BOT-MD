@@ -1,6 +1,6 @@
 {
-"name": "Asta-Bot",
-"version": "2.2.0",
+"name": "MOD-BOT-MD",
+"version": "1.0.0",
 "description": "Super WhatsApp Bot Multi Device",
 "main": "index.js",
 "type": "module",
@@ -18,16 +18,16 @@
 "eslint": "eslint .",
 "eslintfix": "eslint --fix ."
 },
-"homepage": "https://github.com/Fer280809/Asta_bot",
+"homepage": "https://github.com/Fer280809/MOD-BOT-MD",
 "author": {
 "name": "Fer280809"
 },
 "repository": {
 "type": "git",
-"url": "git+https://github.com/Fer280809/Asta_bot.git"
+"url": "git+https://github.com/Fer280809/MOD-BOT-MD.git"
 },
 "bugs": {
-"url": "https://github.com/Fer280809/Asta_bot.git"
+"url": "https://github.com/Fer280809/MOD-BOT-MD.git"
 },
 "license": "GPL-3.0-or-later",
 "dependencies": {
