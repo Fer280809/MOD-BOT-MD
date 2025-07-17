@@ -7,13 +7,52 @@
 <div align="center">
   <h2>
     <a href="#">
-      <img src="https://readme-typing-svg.herokuapp.com?font=Russo+One&weight=700&size=30&duration=4000&pause=1000&color=00FF00&width=435&center=true&vCenter=true&random=false&width=435&lines=✨+ESTE+ES+EL+MEJOR+BOT+DE+WHATSAPP+✨;🔥+ASTA-BOT+PREMIUM+🔥;💫+VELOCIDAD+Y+ESTABILIDAD+💫" alt="Typing SVG" />
+      <img src="https://readme-typing-svg.herokuapp.com?font=Russo+One&weight=700&size=30&duration=4000&pause=1000&color=00FF00&width=435&center=true&vCenter=true&random=false&width=435&lines=✨+ESTE+ES+EL+MEJOR+BOT+DE+WHATSAPP+✨;🔥+MOD-BOT-MD+🔥;💫+VELOCIDAD+Y+ESTABILIDAD+💫" alt="Typing SVG" />
     </a>
   </h2>
 </div>
 
 <h1 align="center">🌟 ¡SI ME DAS UNA ESTRELLA ME AYUDARÍA MUCHO! 🌟</h1>
 
+### **`🎨 PERSONALISA TU BOT PRINCIPAL 🎨`**
+
+<details>
+ <summary><b>🎨 PERSONALIZA TU BOT PRINCIPAL 🎨</b></summary>
+
+<div>
+
+<h3 align="center">✨ COMANDOS PARA PERSONALIZAR TU BOT ✨</h3>
+
+<div align="center">
+
+```
+🔶 PASO 1: #dev
+```
+> Activa el modo desarrollador para personalizar tu bot
+
+```
+🔷 PASO 2: #setmodena
+```
+> Establece el modo de nombre para tu bot
+
+```
+🔸 PASO 3: #setbanner
+```
+> Personaliza el banner de tu bot con imágenes personalizadas
+
+```
+🔹 PASO 4: #setname
+```
+> Cambia el nombre de tu bot a tu gusto
+
+<div align="center">
+<p>🌈 ¡DALE UN ESTILO ÚNICO A TU BOT! 🌈</p>
+</div>
+
+</div>
+</details>
+
+---
 
 ### **`⚠️ Información importante`**
 
@@ -28,7 +67,7 @@
 
 > Bot en desarrollo. Si presenta alguna falla, reportar al creador para darle una solución óptima.
 
-- [x] 🎙️ Interacción con voz y texto
+- [x] 🎙️ Interacción con texto
 - [x] ⚙️ Configuración de grupo avanzada
 - [x] 🛡️ Protección: antidelete, antilink, antispam, etc.
 - [x] 🎉 Bienvenida personalizada con imágenes
@@ -43,42 +82,6 @@
 - [x] 📲 Descarga de música y video de YouTube en alta calidad
 - [ ] 💎 Más funciones premium en desarrollo...
 
-</details>
-
-<details>
- <summary><b>🎨 PERSONALIZA TU BOT PRINCIPAL 🎨</b></summary>
-
-<div>
-
-<h3 align="center">✨ COMANDOS PARA PERSONALIZAR TU BOT ✨</h3>
-
-<div align="center">
-
-```
-🔶 PASO 1: 3dev
-```
-> Activa el modo desarrollador para personalizar tu bot
-
-```
-🔷 PASO 2: 3setmodena
-```
-> Establece el modo de nombre para tu bot
-
-```
-🔸 PASO 3: 3setbanner
-```
-> Personaliza el banner de tu bot con imágenes personalizadas
-
-```
-🔹 PASO 4: 3setname
-```
-> Cambia el nombre de tu bot a tu gusto
-
-<div align="center">
-<p>🌈 ¡DALE UN ESTILO ÚNICO A TU BOT! 🌈</p>
-</div>
-
-</div>
 </details>
 
 ---
@@ -107,24 +110,7 @@ apt update && apt upgrade && pkg install -y git nodejs ffmpeg imagemagick yarn
 ```
 
 ```bash
-git clone https://github.com/Fer280809/Asta && cd Asta
-```
-
-```bash
-sudo apt update
-```
-
-```bash
-sudo apt install nodejs npm
-```
-
-```bash
-sudo yum install nodejs npm
-```
-
-```bash
-node -v
-npm -v
+git clone https://github.com/Fer280809/MOD-BOT-MD && cd MOD-BOT-MD
 ```
 
 ```bash
@@ -151,7 +137,7 @@ npm start
 ❒ Abre Termux y navega al directorio del bot:
    
    ```bash
-    cd Asta_bot
+    cd MOD-BOT-MD
    ```
 
 ❒ Inicia el bot nuevamente:
@@ -165,7 +151,7 @@ npm start
 > Si después de instalar el bot en Termux y iniciar la sesión del bot deseas poner tu número en la lista de owner, usa este comando:
 
    ```bash
-    cd Asta_bot && nano settings.js
+    cd MOD-BOT-MD && nano settings.js
    ```
 
 </details>
@@ -201,7 +187,7 @@ npm start
 ---
 
 <div align="center">
-  <h2 style="background: linear-gradient(to right, #FF0000, #00FF00, #0000FF); -webkit-background-clip: text; -webkit-text-fill-color: transparent; font-size: 30px; font-weight: bold; margin: 20px 0;">📢 ¡ÚNETE AL CANAL OFICIAL DEL BOT ASTA! 📢</h2>
+  <h2 style="background: linear-gradient(to right, #FF0000, #00FF00, #0000FF); -webkit-background-clip: text; -webkit-text-fill-color: transparent; font-size: 30px; font-weight: bold; margin: 20px 0;">📢 ¡ÚNETE AL CANAL OFICIAL DEL MOD-BOT-MD! 📢</h2>
   
   <p style="color: #FF9900; font-size: 18px; margin-bottom: 15px;">En nuestro canal estaremos compartiendo todas las novedades, actualizaciones y tips exclusivos</p>
   
@@ -224,33 +210,15 @@ npm start
   </a>
 </div>
 
-### **`🌟 Colaboradores Destacados`**
-<a href="https://github.com/Fer280809/Asta_bot/graphs/contributors">
-<img src="https://contrib.rocks/image?repo=Fer280809/Asta_bot" /> 
-</a>
 
 ### **`🙏 Créditos`**
-<a href="https://github.com/edward-1738" style="display:inline-block; text-decoration: none;">
-    <img src="https://github.com/edward-1738.png" width="130" height="130" alt="Alex-X" style="border-radius: 50%;"/>
-</a>
-</a>
-<a href="https://github.com/Aqua200" style="display:inline-block; margin-right: 10px; text-decoration: none;">
-    <img src="https://github.com/Aqua200.png" width="130" height="130" alt="Neykoor💜" style="border-radius: 50%;"/>
-</a>
 
-<a href="https://github.com/DevAlexJs" style="display:inline-block; text-decoration: none;">
-    <img src="https://github.com/DevAlexJs.png" width="130" height="130" alt="Alex-X" style="border-radius: 50%;"/>
-</a>
-<a href="https://github.com/David-Chian" style="display:inline-block; margin-right: 10px; text-decoration: none;">
-    <img src="https://github.com/David-Chian.png" width="130" height="130" alt="David-Chian" style="border-radius: 50%;"/>
-</a>
-</a>
 <a href="https://github.com/The-King-Destroy" style="display:inline-block; margin-right: 10px; text-decoration: none;">
     <img src="https://github.com/The-King-Destroy.png" width="130" height="130" alt="ⁱᵃᵐ|𝔇ĕ𝐬†𝓻⊙γ𒆜" style="border-radius: 50%;"/>
 </a>
 
 
-<h1 align="center">⚡ EL BOT SE ACTUALIZA SEMANALMENTE ⚡</h1>
+<h1 align="center">⚡ EL BOT SE ACTUALIZA MENSUALMENTE ⚡</h1>
 
 <div align="center">
   <a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.herokuapp.com?font=Russo+One&weight=800&size=28&pause=1000&color=F7DE00&width=650&center=true&vCenter=true&random=false&width=650&lines=%F0%9F%94%A5+MANT%C3%89N+TU+BOT+SIEMPRE+ACTUALIZADO+%F0%9F%94%A5;%E2%AD%90+NUEVAS+FUNCIONES+CADA+SEMANA+%E2%AD%90;%F0%9F%9A%80+S%C3%8DGUENOS+EN+EL+CANAL+PARA+NOVEDADES+%F0%9F%9A%80" alt="Typing SVG" /></a>
