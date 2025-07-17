@@ -1,5 +1,4 @@
 import moment from 'moment-timezone';
-
 let handler = async (m, { conn, args }) => {
     let userId = m.mentionedJid && m.mentionedJid[0] ? m.mentionedJid[0] : m.sender;
     let user = global.db.data.users[userId];
@@ -14,7 +13,6 @@ let handler = async (m, { conn, args }) => {
 ║    🌸✨ 𝐆𝐀𝐂𝐇𝐀 ✨🌸    ║
 ║   ¡𝑪𝒐𝒍𝒆𝒄𝒄𝒊𝒐𝒏𝒂 𝒘𝒂𝒊𝒇𝒖𝒔!   ║
 ╚═══════════════════════╝
-
 ┌─── 🎲 𝐁Á𝐒𝐈𝐂𝐎 ───┐
 │ 🎯 #rollwaifu #rw
 │    └ Gacha aleatoria
@@ -33,14 +31,12 @@ let handler = async (m, { conn, args }) => {
 │ 🏆 #waifustop #topwaifus
 │    └ Top de waifus
 └─────────────────────
-
 ┌─── 🏪 𝐌𝐄𝐑𝐂𝐀𝐃𝐎 ───┐
 │ 💳 #comprar #buy
 │    └ Comprar waifu
 │ 📋 #mercado #market
 │    └ Ver mercado
 └─────────────────────
-
 ┌─── 💰 𝐕𝐄𝐍𝐓𝐀𝐒 ───┐
 │ 📦 #misventas #ventas
 │    └ Mis waifus en venta
@@ -54,21 +50,19 @@ let handler = async (m, { conn, args }) => {
 │   • subir <cantidad>
 │   • fijar <precio>
 └─────────────────────
-
 ┌─── 🎨 𝐄𝐗𝐓𝐑𝐀 ───┐
 │ 🌸 #waifu
 │    └ Waifu aleatoria
 └─────────────────────
-
 > ✨ ¡Colecciona, comercia y 
 > conviértete en el mejor!
-
 > 💡 Usa #help [comando] para
 > más detalles específicos
     `.trim();
-
+    
     await conn.sendMessage(m.chat, { 
-        text: txt,
+        image: { url: 'https://files.catbox.moe/usbgye.jpg' },
+        caption: txt,
         contextInfo: {
             mentionedJid: [m.sender, userId],
             isForwarded: true,
@@ -89,18 +83,13 @@ let handler = async (m, { conn, args }) => {
         },
     }, { quoted: m });
 };
-
 handler.help = ['gachamenu'];
 handler.tags = ['gacha'];
 handler.command = ['gachamenu', 'menuwaifus', 'waifumenu', 'gachahelp'];
-
 export default handler;
-
 function clockString(ms) {
     let seconds = Math.floor((ms / 1000) % 60);
     let minutes = Math.floor((ms / (1000 * 60)) % 60);
     let hours = Math.floor((ms / (1000 * 60 * 60)) % 24);
     return `${hours}h ${minutes}m ${seconds}s`;
 }
-
-
